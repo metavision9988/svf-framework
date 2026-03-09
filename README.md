@@ -2,7 +2,7 @@
 
 [![Status](https://img.shields.io/badge/Status-v2.0_RC_Final-gold)]()
 [![License](https://img.shields.io/badge/License-CC_BY_4.0-blue)](LICENSE)
-[![DOI](https://img.shields.io/badge/DOI-pending-lightgrey)]()
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18919204.svg)](https://doi.org/10.5281/zenodo.18919204)
 
 **A Navigation System for Diagnosing, Predicting, and Engineering System Trajectories**
 
