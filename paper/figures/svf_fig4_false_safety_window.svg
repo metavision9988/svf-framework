@@ -1,0 +1,140 @@
+<!-- SVF Figure 4: Phase Dynamics & False Safety Window -->
+<!-- Recommended size: 700 × 310px -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 310" width="700" height="310"
+     style="font-family:'IBM Plex Mono',monospace; background:#0a0a0f;">
+
+  <rect width="700" height="310" fill="#0a0a0f"/>
+
+  <!-- False Safety Window shaded region (t=1 to t=4) -->
+  <!-- x: t=0→70, t=1→170, t=4→470, t=6→660 -->
+  <!-- Shaded: x=170 to x=470, y=50 to y=248 -->
+  <rect x="170" y="50" width="300" height="198" fill="#f05c5c" opacity="0.06" rx="0"/>
+  <text x="320" y="68" fill="#f05c5c" font-size="9" text-anchor="middle"
+        opacity="0.65" letter-spacing="1">THE FALSE SAFETY WINDOW (τ)</text>
+  <text x="320" y="80" fill="#f05c5c" font-size="8" text-anchor="middle"
+        opacity="0.5">V allocation continues blindly</text>
+
+  <!-- Grid -->
+  <g stroke="#1e1e2e" stroke-width="1">
+    <!-- Horizontal -->
+    <line x1="70" y1="50"  x2="660" y2="50"/>
+    <line x1="70" y1="99"  x2="660" y2="99"/>
+    <line x1="70" y1="149" x2="660" y2="149"/>
+    <line x1="70" y1="199" x2="660" y2="199"/>
+    <line x1="70" y1="248" x2="660" y2="248"/>
+    <!-- Vertical at each t -->
+    <line x1="70"  y1="50" x2="70"  y2="248"/>
+    <line x1="170" y1="50" x2="170" y2="248"/>
+    <line x1="270" y1="50" x2="270" y2="248"/>
+    <line x1="370" y1="50" x2="370" y2="248"/>
+    <line x1="470" y1="50" x2="470" y2="248"/>
+    <line x1="570" y1="50" x2="570" y2="248"/>
+    <line x1="660" y1="50" x2="660" y2="248"/>
+  </g>
+
+  <!-- Axes -->
+  <line x1="70" y1="248" x2="660" y2="248" stroke="#6b6880" stroke-width="1.5"/>
+  <line x1="70" y1="50"  x2="70"  y2="248" stroke="#6b6880" stroke-width="1.5"/>
+
+  <!-- Y labels: 0-100 → y=248 to y=50. range=198px per 100 units -->
+  <text x="62" y="53"  fill="#6b6880" font-size="9" text-anchor="end">100%</text>
+  <text x="62" y="102" fill="#6b6880" font-size="9" text-anchor="end"> 75%</text>
+  <text x="62" y="152" fill="#6b6880" font-size="9" text-anchor="end"> 50%</text>
+  <text x="62" y="202" fill="#6b6880" font-size="9" text-anchor="end"> 25%</text>
+  <text x="62" y="250" fill="#6b6880" font-size="9" text-anchor="end">  0%</text>
+  <text x="18" y="150" fill="#6b6880" font-size="8" text-anchor="middle"
+        transform="rotate(-90,18,150)">Normalized Value</text>
+
+  <!-- X labels: t=0..6 -->
+  <text x="70"  y="264" fill="#6b6880" font-size="9" text-anchor="middle">t=0</text>
+  <text x="170" y="264" fill="#6b6880" font-size="9" text-anchor="middle">t=1</text>
+  <text x="270" y="264" fill="#6b6880" font-size="9" text-anchor="middle">t=2</text>
+  <text x="370" y="264" fill="#6b6880" font-size="9" text-anchor="middle">t=3</text>
+  <text x="470" y="264" fill="#6b6880" font-size="9" text-anchor="middle">t=4</text>
+  <text x="570" y="264" fill="#6b6880" font-size="9" text-anchor="middle">t=5</text>
+  <text x="660" y="264" fill="#6b6880" font-size="9" text-anchor="middle">t=6</text>
+  <text x="365" y="280" fill="#6b6880" font-size="8" text-anchor="middle">Time Cycles (Δt)</text>
+
+  <!-- L1 Survival Limit: y = 248 - (0.20 * 198) = 248 - 39.6 = 208.4 -->
+  <line x1="70" y1="208" x2="660" y2="208" stroke="#f05c5c" stroke-width="1"
+        stroke-dasharray="5,3" opacity="0.6"/>
+  <text x="664" y="212" fill="#f05c5c" font-size="8" opacity="0.7">L1 Limit</text>
+
+  <!-- S(t) Anchor Scalar: 0.95, 0.55, 0.28, 0.12, 0.05, 0.02, 0.00 -->
+  <!-- y = 248 - val*198 -->
+  <!-- t0:0.95→59, t1:0.55→139, t2:0.28→193, t3:0.12→224, t4:0.05→238, t5:0.02→244, t6:0.00→248 -->
+  <polyline points="70,59 170,139 270,193 370,224 470,238 570,244 660,248"
+            fill="none" stroke="#e8c96a" stroke-width="2.5"/>
+  <circle cx="70"  cy="59"  r="4" fill="#e8c96a"/>
+  <circle cx="170" cy="139" r="4" fill="#e8c96a"/>
+  <circle cx="270" cy="193" r="4" fill="#e8c96a"/>
+  <circle cx="370" cy="224" r="4" fill="#e8c96a"/>
+  <circle cx="470" cy="238" r="4" fill="#e8c96a"/>
+  <circle cx="570" cy="244" r="3" fill="#e8c96a"/>
+  <circle cx="660" cy="248" r="3" fill="#e8c96a"/>
+
+  <!-- S(t) label -->
+  <text x="75" y="55" fill="#e8c96a" font-size="9">S(t)</text>
+
+  <!-- F(t) Field (delayed): 0.90, 0.88, 0.85, 0.80, 0.48, 0.18, 0.04 -->
+  <!-- t0:0.90→69, t1:0.88→73, t2:0.85→79, t3:0.80→89, t4:0.48→153, t5:0.18→212, t6:0.04→240 -->
+  <polyline points="70,69 170,73 270,79 370,89 470,153 570,212 660,240"
+            fill="none" stroke="#5ce8f0" stroke-width="2" stroke-dasharray="7,3"/>
+  <circle cx="70"  cy="69"  r="3" fill="#5ce8f0"/>
+  <circle cx="170" cy="73"  r="3" fill="#5ce8f0"/>
+  <circle cx="270" cy="79"  r="3" fill="#5ce8f0"/>
+  <circle cx="370" cy="89"  r="3" fill="#5ce8f0"/>
+  <circle cx="470" cy="153" r="4" fill="#5ce8f0"/>
+  <circle cx="570" cy="212" r="3" fill="#5ce8f0"/>
+  <circle cx="660" cy="240" r="3" fill="#5ce8f0"/>
+
+  <!-- F(t) label -->
+  <text x="75" y="67" fill="#5ce8f0" font-size="9" dy="14">F(t)</text>
+
+  <!-- P(t) Outcome: 0.86, 0.82, 0.76, 0.64, 0.32, 0.08, 0.00 -->
+  <!-- t0:0.86→78, t1:0.82→86, t2:0.76→97, t3:0.64→121, t4:0.32→185, t5:0.08→232, t6:0.00→248 -->
+  <polyline points="70,78 170,86 270,97 370,121 470,185 570,232 660,248"
+            fill="none" stroke="#5cf0a0" stroke-width="2"/>
+  <circle cx="70"  cy="78"  r="3" fill="#5cf0a0"/>
+  <circle cx="170" cy="86"  r="3" fill="#5cf0a0"/>
+  <circle cx="270" cy="97"  r="3" fill="#5cf0a0"/>
+  <circle cx="370" cy="121" r="3" fill="#5cf0a0"/>
+  <circle cx="470" cy="185" r="4" fill="#5cf0a0"/>
+  <circle cx="570" cy="232" r="3" fill="#5cf0a0"/>
+  <circle cx="660" cy="248" r="3" fill="#5cf0a0"/>
+  <text x="75" y="88" fill="#5cf0a0" font-size="9">P(t)</text>
+
+  <!-- S collapses annotation at t=1 -->
+  <line x1="170" y1="139" x2="170" y2="208" stroke="#f05c5c" stroke-width="1"
+        stroke-dasharray="2,2" opacity="0.8"/>
+  <text x="172" y="125" fill="#f05c5c" font-size="8">S crosses</text>
+  <text x="172" y="135" fill="#f05c5c" font-size="8">L1 here</text>
+
+  <!-- τ bracket -->
+  <line x1="170" y1="290" x2="470" y2="290" stroke="#f05c5c" stroke-width="1"
+        opacity="0.6"/>
+  <line x1="170" y1="285" x2="170" y2="295" stroke="#f05c5c" stroke-width="1" opacity="0.6"/>
+  <line x1="470" y1="285" x2="470" y2="295" stroke="#f05c5c" stroke-width="1" opacity="0.6"/>
+  <text x="320" y="304" fill="#f05c5c" font-size="8" text-anchor="middle" opacity="0.7">
+    ← Delay Constant τ ≈ 3 cycles →
+  </text>
+
+  <!-- Legend -->
+  <rect x="490" y="88" width="200" height="68" fill="#10101a" rx="2"
+        stroke="#1e1e2e" stroke-width="1"/>
+  <line x1="498" y1="103" x2="516" y2="103" stroke="#e8c96a" stroke-width="2.5"/>
+  <text x="521" y="107" fill="#e8c96a" font-size="9">S(t)  Anchor Scalar</text>
+  <line x1="498" y1="119" x2="516" y2="119" stroke="#5ce8f0" stroke-width="2"
+        stroke-dasharray="5,2"/>
+  <text x="521" y="123" fill="#5ce8f0" font-size="9">F(t)  Field (delayed τ)</text>
+  <line x1="498" y1="135" x2="516" y2="135" stroke="#5cf0a0" stroke-width="2"/>
+  <text x="521" y="139" fill="#5cf0a0" font-size="9">P(t)  Outcome</text>
+  <line x1="498" y1="151" x2="516" y2="151" stroke="#f05c5c" stroke-width="1"
+        stroke-dasharray="4,2" opacity="0.6"/>
+  <text x="521" y="155" fill="#f05c5c" font-size="9">L1 Survival Limit</text>
+
+  <!-- Title -->
+  <text x="700" y="14" fill="#6b6880" font-size="9" text-anchor="end">
+    SVF Fig.4 — Phase Dynamics &amp; The False Safety Window
+  </text>
+</svg>

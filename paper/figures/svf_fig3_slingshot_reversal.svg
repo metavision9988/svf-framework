@@ -1,0 +1,115 @@
+<!-- SVF Figure 3: Slingshot Reversal — Korea 1997 Case -->
+<!-- Recommended size: 700 × 280px -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 280" width="700" height="280"
+     style="font-family:'IBM Plex Mono',monospace; background:#0a0a0f;">
+
+  <rect width="700" height="280" fill="#0a0a0f"/>
+
+  <!-- ── PHASE 1 PANEL (left) ── -->
+  <rect x="15" y="15" width="290" height="250" fill="#10101a" rx="2"
+        stroke="#1e1e2e" stroke-width="1"/>
+  <!-- Phase 1 label -->
+  <rect x="15" y="15" width="290" height="28" fill="#0f2a1a" rx="2"/>
+  <text x="160" y="33" fill="#5cf0a0" font-size="10" text-anchor="middle"
+        letter-spacing="1">PHASE 1: Slingshot Active (1990–1996)</text>
+
+  <!-- Origin -->
+  <circle cx="100" cy="170" r="5" fill="#7c6af7"/>
+
+  <!-- F_gravity vector: rightward (capital inflow) -->
+  <line x1="100" y1="170" x2="255" y2="130" stroke="#5cf0a0" stroke-width="2.5"/>
+  <polygon points="255,130 241,131 245,119" fill="#5cf0a0"/>
+  <text x="258" y="128" fill="#5cf0a0" font-size="9">F_gravity</text>
+  <text x="258" y="140" fill="#5cf0a0" font-size="8">(Capital Inflow)</text>
+
+  <!-- V_eff vector: similar direction, slightly lower angle -->
+  <line x1="100" y1="170" x2="220" y2="102" stroke="#e8c96a" stroke-width="2"/>
+  <polygon points="220,102 207,108 210,96" fill="#e8c96a"/>
+  <text x="224" y="100" fill="#e8c96a" font-size="9">V_eff</text>
+  <text x="224" y="112" fill="#e8c96a" font-size="8">(Export Growth)</text>
+
+  <!-- θ_VF arc annotation -->
+  <path d="M 130,170 A 32,32 0 0,1 125,138" fill="none"
+        stroke="#6b6880" stroke-width="1" opacity="0.7"/>
+  <text x="136" y="156" fill="#6b6880" font-size="9">θ≈15°</text>
+
+  <!-- Result P vector: strong, same direction -->
+  <line x1="100" y1="170" x2="270" y2="80" stroke="#5cf0a0" stroke-width="3"
+        stroke-dasharray="8,3" opacity="0.7"/>
+  <polygon points="270,80 256,87 260,74" fill="#5cf0a0" opacity="0.7"/>
+  <text x="240" y="72" fill="#5cf0a0" font-size="9" opacity="0.8">P(t) →</text>
+
+  <!-- Stats box -->
+  <rect x="22" y="210" width="276" height="48" fill="#0a1f14" rx="2"
+        stroke="#1e2e20" stroke-width="1"/>
+  <text x="160" y="227" fill="#5cf0a0" font-size="10" text-anchor="middle">
+    θ_VF = 15°  |  η = 1.6
+  </text>
+  <text x="160" y="243" fill="#5cf0a0" font-size="9" text-anchor="middle">
+    Field AMPLIFIES effort  ×1.6
+  </text>
+  <text x="160" y="255" fill="#6b6880" font-size="8" text-anchor="middle">
+    GDP growth avg. 8.2% (1990–1996)
+  </text>
+
+  <!-- ── TRIGGER / DIVIDER ── -->
+  <line x1="350" y1="15" x2="350" y2="265" stroke="#1e1e2e" stroke-width="1"/>
+  <rect x="315" y="115" width="70" height="50" fill="#1a0a0a" rx="3"
+        stroke="#f05c5c" stroke-width="1"/>
+  <text x="350" y="134" fill="#f05c5c" font-size="11" text-anchor="middle">⚡</text>
+  <text x="350" y="148" fill="#f05c5c" font-size="8" text-anchor="middle">TRIGGER</text>
+  <text x="350" y="158" fill="#f05c5c" font-size="8" text-anchor="middle">1997 Q3</text>
+
+  <!-- ── PHASE 2 PANEL (right) ── -->
+  <rect x="395" y="15" width="290" height="250" fill="#10101a" rx="2"
+        stroke="#1e1e2e" stroke-width="1"/>
+  <rect x="395" y="15" width="290" height="28" fill="#2a0f0f" rx="2"/>
+  <text x="540" y="33" fill="#f05c5c" font-size="10" text-anchor="middle"
+        letter-spacing="1">PHASE 2: Slingshot Reversal (1997)</text>
+
+  <!-- Origin -->
+  <circle cx="530" cy="170" r="5" fill="#7c6af7"/>
+
+  <!-- F_gravity REVERSED: leftward (capital outflow) -->
+  <line x1="530" y1="170" x2="415" y2="130" stroke="#f05c5c" stroke-width="2.5"/>
+  <polygon points="415,130 429,125 426,137" fill="#f05c5c"/>
+  <text x="408" y="124" fill="#f05c5c" font-size="9" text-anchor="end">F_gravity</text>
+  <text x="408" y="136" fill="#f05c5c" font-size="8" text-anchor="end">REVERSED</text>
+  <text x="408" y="148" fill="#f05c5c" font-size="8" text-anchor="end">(Capital Outflow)</text>
+
+  <!-- V_eff: same direction as Phase 1 (unchanged) -->
+  <line x1="530" y1="170" x2="650" y2="102" stroke="#e8c96a" stroke-width="2"/>
+  <polygon points="650,102 637,108 640,96" fill="#e8c96a"/>
+  <text x="654" y="100" fill="#e8c96a" font-size="9">V_eff</text>
+  <text x="654" y="112" fill="#e8c96a" font-size="8">UNCHANGED</text>
+
+  <!-- θ_VF: now 165° (wide angle shown) -->
+  <path d="M 558,168 A 32,32 0 1,0 524,139" fill="none"
+        stroke="#f05c5c" stroke-width="1" stroke-dasharray="3,2" opacity="0.8"/>
+  <text x="534" y="190" fill="#f05c5c" font-size="9">θ≈165°</text>
+
+  <!-- Result P: weak, truncated -->
+  <line x1="530" y1="170" x2="558" y2="154" stroke="#f05c5c" stroke-width="2.5"
+        stroke-dasharray="5,3" opacity="0.6"/>
+  <polygon points="558,154 548,157 550,145" fill="#f05c5c" opacity="0.6"/>
+  <text x="562" y="150" fill="#f05c5c" font-size="9" opacity="0.7">P(t)→</text>
+  <text x="562" y="161" fill="#f05c5c" font-size="8" opacity="0.6">↓ 91%</text>
+
+  <!-- Stats box -->
+  <rect x="402" y="210" width="276" height="48" fill="#1f0a0a" rx="2"
+        stroke="#2e1e1e" stroke-width="1"/>
+  <text x="540" y="227" fill="#f05c5c" font-size="10" text-anchor="middle">
+    θ_VF = 165°  |  η = 0.15
+  </text>
+  <text x="540" y="243" fill="#f05c5c" font-size="9" text-anchor="middle">
+    Field DESTROYS effort  ×0.15
+  </text>
+  <text x="540" y="255" fill="#6b6880" font-size="8" text-anchor="middle">
+    GDP: −5.5% (1998). IMF bailout: $57B
+  </text>
+
+  <!-- Title -->
+  <text x="700" y="11" fill="#6b6880" font-size="9" text-anchor="end">
+    SVF Fig.3 — Slingshot Reversal: Korea 1997
+  </text>
+</svg>

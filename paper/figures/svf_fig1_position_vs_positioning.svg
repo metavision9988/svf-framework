@@ -1,0 +1,114 @@
+<!-- SVF Figure 1: Position vs Positioning Crossover — Nokia vs Apple 2007–2012 -->
+<!-- Recommended size: 700 × 320px. Dark background for VOID PRESS style. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 320" width="700" height="320"
+     style="font-family:'IBM Plex Mono',monospace; background:#0a0a0f;">
+
+  <!-- Background -->
+  <rect width="700" height="320" fill="#0a0a0f"/>
+
+  <!-- Grid lines -->
+  <g stroke="#1e1e2e" stroke-width="1">
+    <line x1="70" y1="40"  x2="660" y2="40"/>
+    <line x1="70" y1="96"  x2="660" y2="96"/>
+    <line x1="70" y1="152" x2="660" y2="152"/>
+    <line x1="70" y1="208" x2="660" y2="208"/>
+    <line x1="70" y1="264" x2="660" y2="264"/>
+    <!-- Vertical grid -->
+    <line x1="70"  y1="40" x2="70"  y2="264"/>
+    <line x1="188" y1="40" x2="188" y2="264"/>
+    <line x1="306" y1="40" x2="306" y2="264"/>
+    <line x1="424" y1="40" x2="424" y2="264"/>
+    <line x1="542" y1="40" x2="542" y2="264"/>
+    <line x1="660" y1="40" x2="660" y2="264"/>
+  </g>
+
+  <!-- Axes -->
+  <line x1="70" y1="264" x2="660" y2="264" stroke="#6b6880" stroke-width="1.5"/>
+  <line x1="70" y1="40"  x2="70"  y2="264" stroke="#6b6880" stroke-width="1.5"/>
+
+  <!-- Y-axis labels -->
+  <text x="60" y="44"  fill="#6b6880" font-size="10" text-anchor="end">100</text>
+  <text x="60" y="100" fill="#6b6880" font-size="10" text-anchor="end">80</text>
+  <text x="60" y="156" fill="#6b6880" font-size="10" text-anchor="end">60</text>
+  <text x="60" y="212" fill="#6b6880" font-size="10" text-anchor="end">40</text>
+  <text x="60" y="268" fill="#6b6880" font-size="10" text-anchor="end">20</text>
+  <text x="18" y="160" fill="#6b6880" font-size="9" text-anchor="middle"
+        transform="rotate(-90,18,160)">Normalized Score (0–100)</text>
+
+  <!-- X-axis labels -->
+  <text x="70"  y="282" fill="#6b6880" font-size="10" text-anchor="middle">2007</text>
+  <text x="188" y="282" fill="#6b6880" font-size="10" text-anchor="middle">2008</text>
+  <text x="306" y="282" fill="#6b6880" font-size="10" text-anchor="middle">2009</text>
+  <text x="424" y="282" fill="#6b6880" font-size="10" text-anchor="middle">2010</text>
+  <text x="542" y="282" fill="#6b6880" font-size="10" text-anchor="middle">2011</text>
+  <text x="660" y="282" fill="#6b6880" font-size="10" text-anchor="middle">2012</text>
+
+  <!-- V_eff reference line at 23.3% (Nokia) -->
+  <line x1="70" y1="219" x2="660" y2="219" stroke="#f05c5c" stroke-dasharray="4,3"
+        stroke-width="1" opacity="0.5"/>
+  <text x="664" y="222" fill="#f05c5c" font-size="8" opacity="0.6">V_eff=23%</text>
+
+  <!-- NOKIA: Position (S̃) — gold, starts high, stays until 2010, then collapses -->
+  <!-- 2007:95 → 2008:90 → 2009:82 → 2010:68 → 2011:38 → 2012:14 -->
+  <!-- y = 264 - (score/100)*224 -->
+  <polyline points="70,51 188,58 306,71 424,113 542,178 660,233"
+            fill="none" stroke="#e8c96a" stroke-width="2.5"/>
+  <!-- dots -->
+  <circle cx="70"  cy="51"  r="4" fill="#e8c96a"/>
+  <circle cx="188" cy="58"  r="4" fill="#e8c96a"/>
+  <circle cx="306" cy="71"  r="4" fill="#e8c96a"/>
+  <circle cx="424" cy="113" r="4" fill="#e8c96a"/>
+  <circle cx="542" cy="178" r="4" fill="#e8c96a"/>
+  <circle cx="660" cy="233" r="4" fill="#e8c96a"/>
+
+  <!-- NOKIA: V_eff flat line — red, flat at ~23% -->
+  <!-- y = 264 - (23/100)*224 = 264 - 51.5 = 212.5 -->
+  <polyline points="70,213 188,215 306,217 424,219 542,221 660,222"
+            fill="none" stroke="#f05c5c" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <circle cx="70"  cy="213" r="3" fill="#f05c5c"/>
+  <circle cx="660" cy="222" r="3" fill="#f05c5c"/>
+
+  <!-- APPLE: Position (S̃) — cyan, starts low (40), rises steeply -->
+  <!-- 2007:40 → 2008:52 → 2009:65 → 2010:76 → 2011:86 → 2012:94 -->
+  <polyline points="70,174 188,148 306,118 424,94 542,72 660,54"
+            fill="none" stroke="#5ce8f0" stroke-width="2.5"/>
+  <circle cx="70"  cy="174" r="4" fill="#5ce8f0"/>
+  <circle cx="188" cy="148" r="4" fill="#5ce8f0"/>
+  <circle cx="306" cy="118" r="4" fill="#5ce8f0"/>
+  <circle cx="424" cy="94"  r="4" fill="#5ce8f0"/>
+  <circle cx="542" cy="72"  r="4" fill="#5ce8f0"/>
+  <circle cx="660" cy="54"  r="4" fill="#5ce8f0"/>
+
+  <!-- APPLE: V_eff — green, flat high at ~95% -->
+  <!-- y = 264 - (95/100)*224 = 264 - 212.8 = 51.2 -->
+  <polyline points="70,52 188,52 306,52 424,52 542,52 660,52"
+            fill="none" stroke="#5cf0a0" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <circle cx="70"  cy="52" r="3" fill="#5cf0a0"/>
+  <circle cx="660" cy="52" r="3" fill="#5cf0a0"/>
+
+  <!-- Crossover annotation (Nokia S crosses Apple S ~2010-2011) -->
+  <circle cx="460" cy="108" r="18" fill="none" stroke="#7c6af7" stroke-width="1.5"
+          stroke-dasharray="3,2" opacity="0.7"/>
+  <text x="480" y="96"  fill="#7c6af7" font-size="9">n*</text>
+  <text x="480" y="107" fill="#7c6af7" font-size="8">crossover</text>
+  <text x="480" y="116" fill="#7c6af7" font-size="8">≈ 3–4 yrs</text>
+
+  <!-- Legend -->
+  <rect x="72" y="44" width="240" height="72" fill="#10101a" rx="2"
+        stroke="#1e1e2e" stroke-width="1"/>
+  <line x1="82" y1="58"  x2="102" y2="58"  stroke="#e8c96a" stroke-width="2.5"/>
+  <text x="108" y="62" fill="#e8c96a" font-size="10">Nokia S̃ (Position / Market Share)</text>
+  <line x1="82" y1="74"  x2="102" y2="74"  stroke="#f05c5c" stroke-width="1.5"
+        stroke-dasharray="5,2"/>
+  <text x="108" y="78" fill="#f05c5c" font-size="10">Nokia V_eff (= 23.3%)</text>
+  <line x1="82" y1="90"  x2="102" y2="90"  stroke="#5ce8f0" stroke-width="2.5"/>
+  <text x="108" y="94" fill="#5ce8f0" font-size="10">Apple S̃ (Position)</text>
+  <line x1="82" y1="106" x2="102" y2="106" stroke="#5cf0a0" stroke-width="1.5"
+        stroke-dasharray="5,2"/>
+  <text x="108" y="110" fill="#5cf0a0" font-size="10">Apple V_eff (≈ 95–99%)</text>
+
+  <!-- Title -->
+  <text x="700" y="16" fill="#6b6880" font-size="9" text-anchor="end">
+    SVF Fig.1 — Position vs. Positioning Crossover
+  </text>
+</svg>

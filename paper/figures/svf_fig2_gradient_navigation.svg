@@ -1,0 +1,95 @@
+<!-- SVF Figure 2: Gradient Navigation — Weak Link Priority -->
+<!-- Recommended size: 700 × 300px -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 300" width="700" height="300"
+     style="font-family:'IBM Plex Mono',monospace; background:#0a0a0f;">
+
+  <rect width="700" height="300" fill="#0a0a0f"/>
+
+  <!-- Left panel: Scalar state bars -->
+  <!-- Panel boundary -->
+  <rect x="20" y="20" width="360" height="260" fill="#10101a" rx="2"
+        stroke="#1e1e2e" stroke-width="1"/>
+  <text x="200" y="42" fill="#6b6880" font-size="9" text-anchor="middle"
+        letter-spacing="2">SCALAR STATE (Business Domain S₁)</text>
+
+  <!-- ASDP limit line: x = 20 + (20/100)*320 = 20 + 64 = 84 -->
+  <line x1="84" y1="52" x2="84" y2="272" stroke="#f05c5c" stroke-width="1"
+        stroke-dasharray="3,3" opacity="0.6"/>
+  <text x="86" y="64" fill="#f05c5c" font-size="8" opacity="0.7">ASDP=20</text>
+
+  <!-- Bar: S1a Cash/Runway — score 30, ANCHOR, RED -->
+  <!-- bar start x=40, bar area width=300, bar width=(30/100)*300=90 -->
+  <text x="36" y="105" fill="#f05c5c" font-size="10" text-anchor="end">S₁a</text>
+  <text x="36" y="116" fill="#6b6880" font-size="8" text-anchor="end">Cash</text>
+  <rect x="40" y="94" width="300" height="26" fill="#1e1e2e" rx="2"/>
+  <rect x="40" y="94" width="90"  height="26" fill="#f05c5c" rx="2" opacity="0.75"/>
+  <text x="138" y="112" fill="#f05c5c" font-size="10" font-weight="bold">30/100</text>
+  <text x="345" y="112" fill="#f05c5c" font-size="8">[ANCHOR — L1 CRITICAL]</text>
+
+  <!-- Bar: S1c Regulatory — score 50, ANCHOR, GOLD -->
+  <text x="36" y="157" fill="#e8c96a" font-size="10" text-anchor="end">S₁c</text>
+  <text x="36" y="168" fill="#6b6880" font-size="8" text-anchor="end">Regs</text>
+  <rect x="40" y="146" width="300" height="26" fill="#1e1e2e" rx="2"/>
+  <rect x="40" y="146" width="150" height="26" fill="#e8c96a" rx="2" opacity="0.55"/>
+  <text x="198" y="164" fill="#e8c96a" font-size="10">50/100</text>
+  <text x="345" y="164" fill="#e8c96a" font-size="8">[ANCHOR]</text>
+
+  <!-- Bar: S1b Moat — score 65, LEVERAGE, GREEN -->
+  <text x="36" y="209" fill="#5cf0a0" font-size="10" text-anchor="end">S₁b</text>
+  <text x="36" y="220" fill="#6b6880" font-size="8" text-anchor="end">Moat</text>
+  <rect x="40" y="198" width="300" height="26" fill="#1e1e2e" rx="2"/>
+  <rect x="40" y="198" width="195" height="26" fill="#5cf0a0" rx="2" opacity="0.55"/>
+  <text x="243" y="216" fill="#5cf0a0" font-size="10">65/100</text>
+  <text x="345" y="216" fill="#5cf0a0" font-size="8">[LEVERAGE]</text>
+
+  <!-- Score axis at bottom -->
+  <line x1="40" y1="248" x2="340" y2="248" stroke="#6b6880" stroke-width="1"/>
+  <text x="40"  y="262" fill="#6b6880" font-size="8" text-anchor="middle">0</text>
+  <text x="115" y="262" fill="#6b6880" font-size="8" text-anchor="middle">25</text>
+  <text x="190" y="262" fill="#6b6880" font-size="8" text-anchor="middle">50</text>
+  <text x="265" y="262" fill="#6b6880" font-size="8" text-anchor="middle">75</text>
+  <text x="340" y="262" fill="#6b6880" font-size="8" text-anchor="middle">100</text>
+  <text x="190" y="278" fill="#6b6880" font-size="8" text-anchor="middle">Score →</text>
+
+  <!-- Right panel: Vector comparison diagram -->
+  <rect x="395" y="20" width="290" height="260" fill="#10101a" rx="2"
+        stroke="#1e1e2e" stroke-width="1"/>
+  <text x="540" y="42" fill="#6b6880" font-size="9" text-anchor="middle"
+        letter-spacing="2">V DIRECTION DECISION</text>
+
+  <!-- Origin dot -->
+  <circle cx="540" cy="200" r="6" fill="#7c6af7"/>
+  <text x="540" y="220" fill="#7c6af7" font-size="8" text-anchor="middle">Origin</text>
+
+  <!-- Anti-pattern V: toward S1b (right and slightly up) -->
+  <!-- S1b is rightward (high score = good position) -->
+  <line x1="540" y1="200" x2="648" y2="148" stroke="#6b6880" stroke-width="1.5"
+        stroke-dasharray="5,3" opacity="0.6"/>
+  <polygon points="648,148 638,153 641,141" fill="#6b6880" opacity="0.6"/>
+  <text x="655" y="145" fill="#6b6880" font-size="9">❌ V_intuitive</text>
+  <text x="655" y="156" fill="#6b6880" font-size="8">→ S₁b (Moat)</text>
+  <text x="655" y="166" fill="#6b6880" font-size="8">65/100</text>
+
+  <!-- Optimal V: toward S1a (left and down — depleted, near ASDP) -->
+  <line x1="540" y1="200" x2="432" y2="108" stroke="#e8c96a" stroke-width="2.5"/>
+  <polygon points="432,108 440,120 447,110" fill="#e8c96a"/>
+  <text x="410" y="98" fill="#e8c96a" font-size="9">✓ V_optimal</text>
+  <text x="410" y="109" fill="#e8c96a" font-size="8">= ∇S</text>
+  <text x="410" y="120" fill="#e8c96a" font-size="8">→ S₁a (Cash)</text>
+  <text x="410" y="131" fill="#e8c96a" font-size="8">30/100 ← L1</text>
+
+  <!-- Gradient magnitude annotation -->
+  <rect x="405" y="235" width="270" height="36" fill="#0a0a0f" rx="2"
+        stroke="#1e1e2e" stroke-width="1"/>
+  <text x="540" y="251" fill="#7c6af7" font-size="9" text-anchor="middle">
+    ∂P/∂S₁a → ∞ as S₁a → 0
+  </text>
+  <text x="540" y="264" fill="#6b6880" font-size="8" text-anchor="middle">
+    Maximum marginal return at minimum Anchor
+  </text>
+
+  <!-- Figure title -->
+  <text x="700" y="14" fill="#6b6880" font-size="9" text-anchor="end">
+    SVF Fig.2 — Gradient Navigation: V_optimal = ∇S
+  </text>
+</svg>
